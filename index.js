@@ -2,7 +2,8 @@ const express = require('express')
 const app = express()
 const cors = require('cors')
 
-app.use(express.json(), cors())
+// app.use(express.json(), cors())
+app.use(express.json(), express.static('build'))
 // app.use(express.json())
 let persons = [
     {
@@ -27,13 +28,8 @@ let persons = [
     },
     {
         "name": "Kurt",
-        "number": "218 212 12 ",
+        "number": "is a duck boi",
         "id": 5
-    },
-    {
-        "name": "fgfg ",
-        "number": "21",
-        "id": 6
     }
 ]
 //   const app = http.createServer((request, response) => {
